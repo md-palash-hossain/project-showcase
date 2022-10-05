@@ -1,32 +1,44 @@
-import ShowBox from "./components/ShowBox";
+import ProjectList from "./components/ProjectList";
 function App() {
   const projectData = [
     {
+      id: "p1",
       image: "gg",
-      title: "demo title",
-      technology: ["html", "css", "tailwind", "react"],
+      title: "demo title 1",
+      technology: ["html", "tailwind", "react"],
+      live: "",
+      source: "",
+    },
+    {
+      id: "p2",
+      image: "gg",
+      title: "demo title 2",
+      technology: ["css", "tailwind", "react"],
+      live: "",
+      source: "",
+    },
+    {
+      id: "p3",
+      image: "gg",
+      title: "demo title 3",
+      technology: ["html", "css", "tailwind"],
+      live: "",
+      source: "",
+    },
+    {
+      id: "p4",
+      image: "gg",
+      title: "demo title 4",
+      technology: ["html", "css", "react"],
       live: "",
       source: "",
     },
   ];
 
   return (
-    <div className="">
-      <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 m-1 ">
-        <ShowBox dataPoints={projectData} />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-        <ShowBox />
-      </section>
-    </div>
+    <section>
+      <ProjectList dataPoints={projectData} />
+    </section>
   );
 }
 
